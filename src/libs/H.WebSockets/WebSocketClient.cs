@@ -24,7 +24,7 @@ namespace H.WebSockets
         /// <summary>
         /// 
         /// </summary>
-        public ClientWebSocket Socket { get; private set; } = new ();
+        public ClientWebSocket Socket { get; private set; } = new ClientWebSocket();
 
         /// <summary>
         /// 
@@ -48,7 +48,7 @@ namespace H.WebSockets
             }
         }
 
-        private TaskWorker ReceiveWorker { get; } = new ();
+        private TaskWorker ReceiveWorker { get; } = new TaskWorker();
 
         #endregion
 

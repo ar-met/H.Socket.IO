@@ -53,11 +53,11 @@ namespace H.Socket.IO
         /// </summary>
         public string? DefaultNamespace { get; set; }
 
-        private Dictionary<string, List<(Action<object, string> Action, Type Type)>> JsonDeserializeActions { get; } = new ();
+        private Dictionary<string, List<(Action<object, string> Action, Type Type)>> JsonDeserializeActions { get; } = new Dictionary<string, List<(Action<object, string> Action, Type Type)>>();
 
-        private Dictionary<string, List<Action<string>>> TextActions { get; } = new ();
+        private Dictionary<string, List<Action<string>>> TextActions { get; } = new Dictionary<string, List<Action<string>>>();
 
-        private Dictionary<string, List<Action>> Actions { get; } = new ();
+        private Dictionary<string, List<Action>> Actions { get; } = new Dictionary<string, List<Action>>();
 
         #endregion
 
